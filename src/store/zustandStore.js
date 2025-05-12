@@ -6,7 +6,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const PHONE_KEY = 'user_phone';
 
-const useAuthStore = create((set) => ({
+const useAuthStore = create((set,get) => ({
   phoneNumber: null,
   products: [],
   wishlist: [],
@@ -33,6 +33,16 @@ const useAuthStore = create((set) => ({
   },
 
   setProducts: (products) => set({ products }),
+  
+  toggleWishlist: (id) => {
+    const { wishlist } = get();
+    if (wishlist.includes(id)) {
+      set({ wishlist: wishlist.filter((item) => item !== id) });
+    } else {
+      set({ wishlist: [...wishlist, id] });
+    }
+  },
+
 }));
 
 export default useAuthStore;

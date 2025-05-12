@@ -1,97 +1,95 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+Sure! Here's the complete `.md` file content formatted correctly — you can copy and save it as `README.md` in your project root:
 
-# Getting Started
+---
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+ # AurelionFutureForge-Assignment
 
-## Step 1: Start Metro
+A simple React Native app that displays a product listing and allows users to add or remove items from their wishlist using Zustand for state management and AsyncStorage for persistence.
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+## 📱 Features
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+- Authentication Screen
+- Product grid listing
+- Wishlist functionality
+- Zustand store for global state
+- AsyncStorage for data persistence
+- Heart icon toggle for adding/removing products from wishlist
+- Wishlist screen to view only favorited products
 
-```sh
-# Using npm
-npm start
+---
 
-# OR using Yarn
-yarn start
+## 🚀 Getting Started
+
+Follow these steps to set up the project locally.
+
+### Prerequisites
+
+- Node.js (>= 14.x)
+- npm or yarn
+- React Native CLI
+- Android Studio or physical Android device
+
+---
+
+### 🔧 Installation
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/arijitdas13105/AurelionFutureForge-Assignment.git
+   cd AurelionFutureForge-Assignment
+    ````
+2. **Install dependencies:**
+
+   ```bash
+   npm install 
+   ```
+
+---
+
+### ▶️ Run the App
+
+Open **two terminal windows or tabs**:
+
+#### Terminal 1 – Start Metro Bundler
+
+```bash
+npx react-native start
 ```
 
-## Step 2: Build and run your app
+#### Terminal 2 – Run on Android
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
-
-### Android
-
-```sh
-# Using npm
-npm run android
-
-# OR using Yarn
-yarn android
+```bash
+npx react-native run-android
 ```
 
-### iOS
+> 💡 Make sure an Android emulator is running or a device is connected.
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+---
+> 💡💡 And the OTP will be always -123456 
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+---
+ 
 
-```sh
-bundle install
-```
+## ✅ Assignment Requirements Checklist
 
-Then, and every time you update your native dependencies, run:
+* [x] Product listing screen with 2-column layout
+* [x] Wishlist functionality
+* [x] Zustand used for state management
+* [x] AsyncStorage used for persistence
+* [x] Separate wishlist screen
+* [x] Basic UI with brand, title, price, original price, and discount
+* [x] README with setup instructions ✅
 
-```sh
-bundle exec pod install
-```
+---
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+## 📸 Screenshot
 
-```sh
-# Using npm
-npm run ios
+<img src="./assets/Screenshot_1747089380.png" alt="App Screenshot" width="300" />
+<img src="./assets/Screenshot_1747089464.png" alt="App Screenshot" width="300" />
+<img src="./assets/Screenshot_1747089470.png" alt="App Screenshot" width="300" />
+<img src="./assets/Screenshot_1747089514.png" alt="App Screenshot" width="300" />
+<img src="./assets/Screenshot_1747089518.png" alt="App Screenshot" width="300" /> 
+<img src="./assets/Screenshot_1747089636.png" alt="App Screenshot" width="300" />
 
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
-
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+ 

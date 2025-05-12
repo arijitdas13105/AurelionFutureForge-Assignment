@@ -1,15 +1,15 @@
-// src/Navigators/MainTabs.js
-
+ 
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import ProductListingScreen from '../Screens/ProductListingScreen';
 import { View, Text } from 'react-native';
 import Profile from '../Screens/ProfileScreen';
-
+import Wishlist from '../Screens/WishlistScreen';
+ 
 const Tab = createBottomTabNavigator();
 
-const Wishlist = () => <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}><Text>Wishlist</Text></View>;
+// const Wishlist = () => <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}><Text>Wishlist</Text></View>;
 const MyCart = () => <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}><Text>My Cart</Text></View>;
  
 const MainTabs = () => {

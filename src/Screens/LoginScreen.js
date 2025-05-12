@@ -1,5 +1,4 @@
-// src/Screens/LoginScreen.js
-import { useNavigation } from '@react-navigation/native';
+ import { useNavigation } from '@react-navigation/native';
 import React, { useState, useRef } from 'react';
 import {
   View,
@@ -20,28 +19,9 @@ const LoginScreen = () => {
   const [phoneNumber, setPhoneNumberState] = useState('');
   const [countryCode, setCountryCode] = useState('IN');
   const phoneInputRef = useRef(null);
-  // const { setPhoneNumber } = useAuthStore(); 
-  const setPhoneNumber = useAuthStore(state => state.setPhoneNumber);
+   const setPhoneNumber = useAuthStore(state => state.setPhoneNumber);
 
-
-  // const handleContinue = () => {
-  //   // Validate phone number
-  //   const checkValid = phoneInputRef.current?.isValidNumber(phoneNumber);
-  //   if (checkValid) {
-  //     setPhoneNumber(phoneNumber);
-
-  //     // Proceed with login
-  //     console.log('Valid Phone Number:', phoneNumber);
-  //     navigation.navigate('Otp', {
-  //       phoneNumber,
-  //       otpLength: 6 // Change this to 4 or 6 depending on your desired OTP length
-  //     });
-  //   } else {
-  //     // Show error
-  //     console.log('Invalid Phone Number');
-  //   }
-  // };
-
+ 
   const handleContinue = async () => {
     const checkValid = phoneInputRef.current?.isValidNumber(phoneNumber);
     if (checkValid) {
@@ -125,7 +105,7 @@ const LoginScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white', // Blue background
+    backgroundColor: 'white',  
   },
   content: {
     flex: 1,
@@ -168,8 +148,8 @@ const styles = StyleSheet.create({
     lineHeight: 50,
   },
   flagButton: {
-    width: 50, // Ensure enough width for the flag
-    padding: 8, // Add padding for better alignment
+    width: 50, 
+    padding: 8, 
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -182,7 +162,7 @@ const styles = StyleSheet.create({
     fontSize: 12,
   },
   highlightedText: {
-    color: '#3f77e4', // Yellow color
+    color: '#3f77e4',  
   },
   buttonContainer: {
     position: 'absolute',
@@ -190,7 +170,7 @@ const styles = StyleSheet.create({
     right: 16,
   },
   continueButton: {
-    backgroundColor: '#fbbf24', // Yellow
+    backgroundColor: '#fbbf24',  
     paddingVertical: 12,
     borderRadius: 8,
     alignItems: 'center',
@@ -220,7 +200,7 @@ const styles = StyleSheet.create({
   },
   createAccountHighlight: {
     fontWeight: 'bold',
-    color: '#3f77e4', // Yellow
+    color: '#3f77e4',  
     textDecorationColor: 'blue',
     textDecorationLine: 'underline',
   },

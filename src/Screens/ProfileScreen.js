@@ -1,11 +1,9 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Alert } from 'react-native';
-import useAuthStore from '../store/zustandStore';
-import { useNavigation } from '@react-navigation/native';
+import useAuthStore from '../store/zustandStore'; 
 
 const ProfileScreen = () => {
-  const navigation = useNavigation();
-  const phoneNumber = useAuthStore(state => state.phoneNumber);
+   const phoneNumber = useAuthStore(state => state.phoneNumber);
   const clearPhoneNumber = useAuthStore(state => state.clearPhoneNumber);
 
   const handleLogout = async () => {
@@ -13,20 +11,19 @@ const ProfileScreen = () => {
       'Logout',
       'Are you sure you want to logout?',
       [
-        {
-          text: 'Cancel',
-          style: 'cancel',
-        },
+        { text: 'Cancel', style: 'cancel' },
         {
           text: 'Logout',
-          onPress: async () => {
-            await clearPhoneNumber();
-            navigation.reset({
-              index: 0,
-              routes: [{ name: 'Login' }],
-            });
-          },
           style: 'destructive',
+          onPress: async () => {
+            // await AsyncStorage.removeItem('is_authenticated'); // Clear auth flag
+            // await clearPhoneNumber(); // Clear phone from Zustand + AsyncStorage
+            // navigation.reset({
+            //   index: 0,
+            //   routes: [{ name: 'Login' }],
+            // });
+            await clearPhoneNumber();
+          },
         },
       ],
       { cancelable: false }
@@ -38,16 +35,13 @@ const ProfileScreen = () => {
       <View style={styles.profileHeader}>
         <Text style={styles.title}>Profile</Text>
       </View>
-      
+
       <View style={styles.profileInfo}>
         <Text style={styles.label}>Phone Number:</Text>
         <Text style={styles.value}>{phoneNumber}</Text>
       </View>
 
-      <TouchableOpacity 
-        style={styles.logoutButton}
-        onPress={handleLogout}
-      >
+      <TouchableOpacity style={styles.logoutButton} onPress={handleLogout}>
         <Text style={styles.logoutButtonText}>Logout</Text>
       </TouchableOpacity>
     </View>
@@ -99,3 +93,4 @@ const styles = StyleSheet.create({
 });
 
 export default ProfileScreen;
+ 
